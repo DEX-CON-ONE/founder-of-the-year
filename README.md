@@ -41,3 +41,7 @@ See [PRIVACY.md](PRIVACY.md). The plugin makes no network calls of its own; your
 ## Affiliation
 
 Works with Claude Code and other Agent Skills-compatible tools. An independent project, not affiliated with, endorsed by or sponsored by Anthropic or OpenAI, and not affiliated with any news organisation or professional body.
+
+## Contributing, security and licence
+
+Change requests and bug reports go through the issue templates; pull requests target `main`, which is protected (one approval, code-owner review, passing checks). See [CONTRIBUTING.md](CONTRIBUTING.md). Anything that could leak a credential, a private path or a personal detail is a security issue: see [SECURITY.md](SECURITY.md). Released under the [MIT licence](LICENSE). Maintainers: [RELEASING.md](RELEASING.md).

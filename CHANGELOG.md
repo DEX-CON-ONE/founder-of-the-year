@@ -1,5 +1,10 @@
 # Changes
 
+## 0.9.3 - 5 October 2026
+
+- Video stage gathers the founder's brand and work imagery before composing: brand marks, headless-browser captures of the founder's own sites and the flagship project's public page (figures masked), the article's own hero, used as moving set behind the type (`promo-video.md`).
+- Repository scaffolding for a public release: contributing guide, security policy, issue and pull request templates, code owners, a `validate` workflow (plugin manifest, changelog and version agreement, skill and agent frontmatter, referenced files exist, no secrets or private paths), a branch ruleset and a setup script, a releasing checklist. MIT licence (holder: Dexteritas Consulting Ltd) pending the maintainer's final decision.
+
 ## 0.9.2 - 5 October 2026
 
 - Intro video stage (`references/promo-video.md`): an announcer-led stage introduction of the founder, about 25 to 35 seconds, with an instrumental track generated for the piece, every spoken line tied to a verification-sheet ID, and an honest end card. "Founder of the Year" stays the feature's title, never an award.

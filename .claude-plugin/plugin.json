@@ -1,6 +1,6 @@
 {
   "name": "founder-of-the-year",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "Confident, attractive founder profiles for Claude Code: gathers from the founder's own sources first (vault, CRM, GitHub, case studies), asks one short batch of questions, checks every claim, then writes a magazine-style feature as Markdown, HTML and PDF with a separate verification sheet. Honestly labelled as founder-prepared; never implies an award, publisher or byline.",
   "author": {
     "name": "Gareth Huggins"
