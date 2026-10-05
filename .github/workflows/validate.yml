@@ -1,0 +1,71 @@
+name: Validate plugin
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: plugin.json and marketplace.json parse, version matches CHANGELOG
+        run: |
+          python3 - <<'PY'
+          import json, re, sys
+          p = json.load(open('.claude-plugin/plugin.json'))
+          json.load(open('.claude-plugin/marketplace.json'))
+          v = p['version']
+          head = open('CHANGELOG.md', encoding='utf-8').read()
+          if not re.search(r'^## ' + re.escape(v) + r'\b', head, re.M):
+              sys.exit(f'CHANGELOG.md has no entry for version {v}')
+          print('plugin.json ok, version', v)
+          PY
+
+      - name: SKILL.md has frontmatter with name and description
+        run: |
+          python3 - <<'PY'
+          import re, sys
+          s = open('skills/founder-of-the-year/SKILL.md', encoding='utf-8').read()
+          m = re.match(r'---\n(.*?)\n---', s, re.S)
+          if not m or 'name:' not in m.group(1) or 'description:' not in m.group(1):
+              sys.exit('SKILL.md frontmatter missing name or description')
+          print('SKILL.md frontmatter ok;', len(s), 'chars')
+          PY
+
+      - name: Every reference linked from SKILL.md exists
+        run: |
+          python3 - <<'PY'
+          import re, os, sys
+          base = 'skills/founder-of-the-year'
+          s = open(f'{base}/SKILL.md', encoding='utf-8').read()
+          missing = [l for l in re.findall(r'\]\((references/[^)]+)\)', s) if not os.path.exists(f'{base}/{l}')]
+          if missing: sys.exit('Missing references: ' + ', '.join(missing))
+          print('all referenced files exist')
+          PY
+
+      - name: Agents declare a name and description
+        run: |
+          python3 - <<'PY'
+          import glob, re, sys
+          bad = []
+          for f in glob.glob('agents/*.md'):
+              s = open(f, encoding='utf-8').read()
+              m = re.match(r'---\n(.*?)\n---', s, re.S)
+              if not m or 'name:' not in m.group(1) or 'description:' not in m.group(1): bad.append(f)
+          if bad: sys.exit('Agents without frontmatter: ' + ', '.join(bad))
+          print('agents ok')
+          PY
+
+      - name: No secrets or private paths committed
+        run: |
+          set -e
+          if grep -rnE "(ghp_[A-Za-z0-9]{20,}|sk-[A-Za-z0-9]{20,}|BEGIN (RSA|OPENSSH) PRIVATE KEY|C:\\\\Users\\\\|/home/[a-z]+/)" --include=*.md --include=*.json --include=*.html --include=*.yml . ; then
+            echo "Found something that looks like a secret or a private path"; exit 1
+          fi
+          echo "no secrets or private paths found"

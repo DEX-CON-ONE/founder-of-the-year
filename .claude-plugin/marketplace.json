@@ -1,0 +1,16 @@
+{
+  "name": "founder-of-the-year",
+  "owner": {
+    "name": "Gareth Huggins"
+  },
+  "plugins": [
+    {
+      "name": "founder-of-the-year",
+      "source": "./",
+      "description": "Confident, attractive founder profiles for Claude Code: gathers from the founder's own sources first, asks one short batch of questions, checks every claim, then writes a magazine-style feature as Markdown, HTML and PDF with a separate verification sheet. Honestly labelled; never implies an award."
+    }
+  ],
+  "metadata": {
+    "description": "A single-plugin marketplace for Founder of the Year: a founder-profile workflow for Claude Code (one skill, four agents) that gathers before it asks and writes a confident, evidence-backed feature. Founder-prepared and AI-assisted; never implies an award."
+  }
+}

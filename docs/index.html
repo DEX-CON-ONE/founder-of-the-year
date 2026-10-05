@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Founder of the Year: an evidence-led founder-feature workflow</title>
+<meta name="description" content="A Claude Code plugin that writes a confident, magazine-style founder profile as HTML, PDF and Markdown, with a verification sheet behind it. It gathers from the founder's own sources first, asks once, checks every claim, then writes. Founder-prepared and AI-assisted; never implies an award.">
+<meta property="og:title" content="Founder of the Year: an evidence-led founder-feature workflow">
+<meta property="og:description" content="Gather first, ask once, choose the story, write, check. Every claim traceable; caveats in a sheet, not the article; nothing posted without you.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site"><div class="wide">
+  <a class="brand" href="./">Founder of the Year</a>
+  <nav aria-label="Primary"><a href="#how">How it works</a><a href="#honest">Honesty</a><a href="example/">Worked example</a><a href="#install">Install</a></nav>
+</div></header>
+
+<main id="main">
+<div class="wide"><div class="hero wrap" style="padding-left:0;padding-right:0">
+  <p class="kicker">A Claude Code plugin</p>
+  <h1>Founder of the Year</h1>
+  <p class="lede">A workflow that writes a confident, magazine-style profile of a founder and their businesses, as a web page, a PDF and Markdown, with a verification sheet behind it. It reads the founder's own sources first, asks one short batch of questions, checks every claim, then writes.</p>
+  <p class="label"><strong>Founder-prepared and AI-assisted.</strong> The name is a creative brief, not a status: the output never implies an award, a publisher byline, an endorsement or independent verification, and says so on every page it produces.</p>
+  <div class="cta">
+    <a class="btn primary" href="example/">See a worked example</a>
+    <a class="btn ghost" href="#install">Install</a>
+  </div>
+</div></div>
+
+<div class="wide"><div class="wrap" style="padding-left:0;padding-right:0">
+
+<section id="how">
+  <h2>How it works</h2>
+  <p>Six steps, each leaving a file you can read. Ask for one step or the whole run.</p>
+  <ol class="steps">
+    <li><strong>Set up</strong><span>Who you are, who the reader is, who may be named and what stays private. Earlier drafts and interviews are imported, not redone.</span></li>
+    <li><strong>Gather first</strong><span>It finds out what it can reach, then reads your notes vault, CRM, code host, case studies and public records before asking you anything. Read-only, no credentials.</span></li>
+    <li><strong>Ask once</strong><span>One short batch of questions, each with a sensible default, for what the records cannot say. Interview questions only for the human story.</span></li>
+    <li><strong>Choose the story</strong><span>A few candidate angles judged on evidence, interest and risk, then one is chosen.</span></li>
+    <li><strong>Write it</strong><span>Headline, standfirst, at-a-glance panel, highlight band, case studies, timeline, exact pull-quotes. Delivered as a designed page, a PDF and Markdown.</span></li>
+    <li><strong>Check and hand over</strong><span>One evidence check and one editorial read, then a few plain lines telling you what was made and where.</span></li>
+  </ol>
+</section>
+
+<section id="honest">
+  <h2>Honest by construction</h2>
+  <ul class="tick">
+    <li><strong>A claim ledger.</strong> Each claim has a source, a date, a status (corroborated, attributed, conflicting, unverified) and a treatment. A source proves only what it can: code is not deployment, a CV is not independent corroboration, a company's own testimonial is the company's voice.</li>
+    <li><strong>Public and private are different folders.</strong> The shareable pack and the private research record never mix, and superseded drafts go to a legacy folder instead of lingering.</li>
+    <li><strong>Your words, not the model's.</strong> Anything attributed to you has to be in the interview record. Quotations are exact or they are paraphrase; none is reconstructed.</li>
+    <li><strong>It audits you first.</strong> Before it flatters you it checks your own websites and the public registers, because that is where an editor looks first.</li>
+    <li><strong>Caveats live in the sheet.</strong> The article reads like a profile, not an audit. Everything a sceptical editor would ask sits in a separate verification sheet.</li>
+    <li><strong>Nothing leaves your machine on its own.</strong> It drafts a pitch; it does not send one. Publishing, posting and submitting are always your decision.</li>
+  </ul>
+  <h3>Four agents, narrow jobs</h3>
+  <div class="cards">
+    <div class="card"><h3>Researcher</h3><p>Investigates one bounded question from primary sources and writes a dated source register.</p></div>
+    <div class="card"><h3>Evidence reviewer</h3><p>Tests every consequential sentence against the raw sources. Read-only.</p></div>
+    <div class="card"><h3>Editorial reviewer</h3><p>Reads the draft cold, as a stranger would, and judges the promise, the structure and the tone. Read-only.</p></div>
+    <div class="card"><h3>Pack reviewer</h3><p>Checks every document against the others for drift, overreach and privacy leaks. Read-only.</p></div>
+  </div>
+  <p class="note">The process is modelled on published newsroom principles of accuracy, verification, transparency and accountability, for example the <a href="https://www.spj.org/spj-code-of-ethics/">SPJ Code of Ethics</a> and <a href="https://reutersagency.com/about/standards-values/">Reuters' standards</a>. It is not affiliated with, endorsed by or checked by either, and AI review is not external verification.</p>
+</section>
+
+<section id="example">
+  <h2>A worked example, with a disclosure</h2>
+  <p>The first real run was on the author's own story, so the example is a founder-prepared feature about the person who wrote this tool: a database specialist who took a startup's platform from voice notes to launch-ready and is building a software factory for small firms. It comes with its verification sheet, which shows which statements are public records, company pages, the founder's account or a design, and what is still unchecked. Read the sheet alongside the feature: that is the point.</p>
+  <div class="cta"><a class="btn primary" href="example/">Open the example</a></div>
+</section>
+
+<section id="install">
+  <h2>Install</h2>
+  <p>In Claude Code:</p>
+  <pre><code>/plugin marketplace add DEX-CON-ONE/founder-of-the-year
+/plugin install founder-of-the-year@founder-of-the-year</code></pre>
+  <p>Or, for other Agent Skills tools:</p>
+  <pre><code>npx skills add DEX-CON-ONE/founder-of-the-year</code></pre>
+  <p>Then ask, in plain words:</p>
+  <pre><code>Use founder-of-the-year to write my founder profile. My notes are in my
+vault and my client work is on GitHub; read those first and ask me only
+what you can't find.</code></pre>
+  <p class="note">The plugin is plain Markdown plus one HTML template: a skill, four agents and ten reference files. It contains no code, hooks or servers; the PDF is printed with a browser you already have. Agents can use your agent's web tools when you authorise delegation, and your prompts go to your model provider under its terms.</p>
+</section>
+
+<section id="limits">
+  <h2>What it is not</h2>
+  <ul class="tick">
+    <li>Not an award, a ranking or a publication, and not independent journalism.</li>
+    <li>Not a verifier: it checks claims against the sources you supply and public records, and says what it could not check.</li>
+    <li>Not a mass-pitch tool. The pitch is a draft for a human to rewrite, and many journalists object to AI-written pitches.</li>
+    <li>Not finished. It has been run end to end once, on a real founder, and improved from what that run found. Issues and criticism are welcome.</li>
+  </ul>
+</section>
+
+</div></div>
+</main>
+
+<footer class="site"><div class="wide">
+  <p>Works with Claude Code and other Agent Skills-compatible tools. An independent project, not affiliated with, endorsed by or sponsored by Anthropic or OpenAI. Built by Gareth Huggins; the worked example is about its author.</p>
+</div></footer>
+</body>
+</html>

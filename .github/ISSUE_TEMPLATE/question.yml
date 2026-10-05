@@ -1,0 +1,15 @@
+name: Question
+description: How does a step work, or how should the skill be used in a situation
+labels: [question]
+body:
+  - type: textarea
+    id: q
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where you looked already
+      placeholder: README, SKILL.md step 3

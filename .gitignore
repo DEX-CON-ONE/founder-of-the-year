@@ -1,0 +1,12 @@
+# Nothing about a real founder belongs in this repository.
+founder-feature/
+*.private.*
+private/
+
+# Local tooling
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

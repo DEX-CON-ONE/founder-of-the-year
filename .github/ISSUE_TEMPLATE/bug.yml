@@ -1,0 +1,28 @@
+name: Bug
+description: Something the skill or an agent did wrong, or an instruction that does not work
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran (the request to Claude, or the step in SKILL.md), what the skill did, and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: file
+    attributes:
+      label: File or step involved
+      placeholder: skills/founder-of-the-year/references/source-adapters.md, step 2
+  - type: input
+    id: version
+    attributes:
+      label: Plugin version
+      placeholder: 0.9.2
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: This report contains no credentials, private paths, figures or personal details about a real person.
+          required: true

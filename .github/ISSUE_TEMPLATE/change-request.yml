@@ -1,0 +1,29 @@
+name: Change request
+description: Ask for the skill to behave differently or do something new
+labels: [change-request]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What the founder needed
+      description: The situation, in a sentence or two. What were you trying to produce?
+    validations:
+      required: true
+  - type: textarea
+    id: gap
+    attributes:
+      label: Where the current behaviour fell short
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would change
+      description: The step or reference file, and the wording or behaviour you propose. A rough draft is fine.
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Honesty rules
+      options:
+        - label: The change keeps the skill drafting only (never sending, posting or publishing) and never invents facts, quotes, awards or affiliations.
+          required: true
