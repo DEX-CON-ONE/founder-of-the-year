@@ -19,8 +19,15 @@ for L in "bug:d73a4a:Something is wrong" "change-request:0e8a16:A requested chan
 done
 
 echo "Branch ruleset on the default branch (pull request, one approval, code-owner review, passing 'validate' check, no force-push, no deletion)"
-EXISTING=$(gh api "repos/$REPO/rulesets" --jq '.[] | select(.name=="Protect main") | .id' 2>/dev/null || true)
-if [ -n "$EXISTING" ]; then
+if ! gh api "repos/$REPO/rulesets" >/dev/null 2>&1; then
+  echo "  rulesets are not available on a private repository on this plan; re-run this script after making the repository public"
+  EXISTING=""; SKIP_RULESET=1
+else
+  EXISTING=$(gh api "repos/$REPO/rulesets" --jq '.[] | select(.name=="Protect main") | .id' 2>/dev/null || true)
+fi
+if [ -n "${SKIP_RULESET:-}" ]; then
+  :
+elif [ -n "$EXISTING" ]; then
   gh api -X PUT "repos/$REPO/rulesets/$EXISTING" --input "$DIR/.github/rulesets/protect-main.json" >/dev/null && echo "  updated ruleset $EXISTING"
 else
   gh api -X POST "repos/$REPO/rulesets" --input "$DIR/.github/rulesets/protect-main.json" >/dev/null && echo "  created ruleset"
