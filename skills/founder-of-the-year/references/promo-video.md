@@ -1,6 +1,6 @@
 # The intro video: a stage introduction for the founder
 
-When the founder asks for a video, make one short piece in the style of a conference host bringing a speaker on stage: an announcer, a modern instrumental track, the founder's name and face at the peak, and an honest end card. It is the `/brag` idea pointed at a person instead of a product. Twenty to thirty seconds, 1920 by 1080, with a poster frame and share copy.
+When the founder asks for a video, make one short piece in the style of a conference host bringing a speaker on stage: an announcer, a modern instrumental track, the founder's name and face at the peak, and an honest end card. It is the `/brag` idea pointed at a person instead of a product: this stage is built on the open-source [/brag](https://github.com/latent-spaces/brag) skill by Shunit Haviv Hakimi (MIT) and [Hyperframes](https://hyperframes.heygen.com/). Credit both in the share copy, the pack and the handover, and name the voice and music services used. Twenty to thirty seconds, 1920 by 1080, with a poster frame and share copy.
 
 ## What it must and must not say
 

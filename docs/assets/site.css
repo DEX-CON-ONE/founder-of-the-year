@@ -69,3 +69,6 @@ article th{background:var(--soft)}
 article em:first-child{font-style:italic}
 @media (max-width:40rem){body{font-size:1rem}.hero{padding-top:2.25rem}nav a{margin-left:.7rem}}
 @media print{header.site,footer.site,.cta{display:none}body{background:#fff;color:#000}}
+
+/* Intro video */
+.video{margin:0 0 28px}.video video{width:100%;display:block;border-radius:14px;background:#000;aspect-ratio:16/9}.video figcaption{font-size:.9rem;line-height:1.5;opacity:.85;margin-top:10px}

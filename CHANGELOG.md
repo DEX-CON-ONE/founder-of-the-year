@@ -3,6 +3,7 @@
 ## 0.9.3 - 5 October 2026
 
 - Video stage gathers the founder's brand and work imagery before composing: brand marks, headless-browser captures of the founder's own sites and the flagship project's public page (figures masked), the article's own hero, used as moving set behind the type (`promo-video.md`).
+- Video first: the docs site, README and handover lead with the intro video; the worked example hosts it; the video stage credits the open-source /brag skill (Shunit Haviv Hakimi, MIT) and Hyperframes.
 - Repository scaffolding for a public release: contributing guide, security policy, issue and pull request templates, code owners, a `validate` workflow (plugin manifest, changelog and version agreement, skill and agent frontmatter, referenced files exist, no secrets or private paths), a branch ruleset and a setup script, a releasing checklist. MIT licence (holder: Dexteritas Consulting Ltd) pending the maintainer's final decision.
 
 ## 0.9.2 - 5 October 2026

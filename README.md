@@ -4,6 +4,12 @@
 
 A Claude Code plugin (one skill, four agents) that writes a confident, attractive, magazine-style profile of a founder and their businesses, as Markdown, a designed HTML page and a PDF, with a short media pack and a separate verification sheet behind it. The name is a creative brief, not a status.
 
+## The intro video
+
+[![Watch the stage introduction the skill made for its worked example](docs/example/intro-poster.jpg)](https://dex-con-one.github.io/founder-of-the-year/example/intro.mp4)
+
+Alongside the article, the skill produces a 49-second stage-introduction video: an arena announcer, a modern instrumental generated for the piece, the founder's own sites and brand marks behind the type, and the founder's portrait at the name reveal. Every spoken line is tied to the verification sheet. The video stage is built on the open-source [/brag](https://github.com/latent-spaces/brag) skill by Shunit Haviv Hakimi (MIT) and [Hyperframes](https://hyperframes.heygen.com/); voice and music come from ElevenLabs. See [`references/promo-video.md`](skills/founder-of-the-year/references/promo-video.md).
+
 ## What it does
 
 1. **Set up.** Reads what already exists (a brief, an earlier draft, an interview) and records who may be named and what stays private.
